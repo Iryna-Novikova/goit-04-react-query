@@ -14,7 +14,7 @@ export const fetchMovies = async (query: string, page:number): Promise<MoviesHtt
     const endPoint = '/movie';
     const params = {
         query,
-        page
+        page,
     }
 
     const response = await axios.get<MoviesHttpResponse>(endPoint, { params, headers: { Authorization: `Bearer ${myKey}` } });
